@@ -1,20 +1,72 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content>
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col>
+          <div class="black-white-boxes-cls">
+            <!-- 1th -->
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+
+            <!-- 2st -->
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+
+            <!-- 3th -->
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+
+            <!-- 4th -->
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div id="policy-accept-term-container" [formGroup]="termConditionFormGrp">
+    <ion-text>
+      <h2>Please accept the terms of use</h2>
+    </ion-text>
+
+    <div class="policy-accept-term">
+      <div class="policy-checkbox">
+        <ion-checkbox labelPlacement="end" formControlName="termUse"></ion-checkbox>
+        <div>I have read and accept
+          the <a routerLink="/termsofuse" >Terms of use</a></div>
+      </div>
+
+      <br /><br />
+      <div class="policy-checkbox">
+        <ion-checkbox labelPlacement="end"  formControlName="privacy"></ion-checkbox>
+        <div>
+          I have read and accept
+          the <a routerLink="/privacypolicy">Privacy Policy</a>
+        </div>
+      </div>
+
+      <br /><br />
+      <div class="policy-checkbox">
+        <ion-checkbox labelPlacement="end"  formControlName="accept">
+          <p style="white-space: pre-wrap">
+            I agree that I am 18 years of age or older or have permission from a
+            parent or guardian to use this mobile application
+          </p></ion-checkbox
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="action-btn-container">
+    <ion-button expand="block" [disabled]="!allTermAccepted" routerLink="/login">I Accept</ion-button>
   </div>
 </ion-content>

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" color="light">
+  <ion-text color="primary">
+    <h1>Hello Again</h1>
+  </ion-text>
+  <p>
+    Welcome back! Enter your login details below to continue where you left off.
+  </p>
+  <ion-card>
+    <ion-card-content>
+      <ion-input
+        type="email"
+        fill="solid"
+        label="Email"
+        color="secondary"
+        labelPlacement="floating"
+        [clearInput]="true"
+        errorText="Invalid email"
+        ngModel
+        email
+      ></ion-input>
+      <ion-input
+        type="password"
+        fill="solid"
+        label="Password"
+        color="secondary"
+        [clearInput]="true"
+        labelPlacement="floating"
+        errorText="Invalid email"
+        ngModel
+        password
+      ></ion-input>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-text color="danger"><b>Email or password is incorrect</b></ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button   expand="block">Log In</ion-button>
+
+</ion-content>
