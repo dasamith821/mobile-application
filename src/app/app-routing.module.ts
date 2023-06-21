@@ -18,6 +18,11 @@ const routes: Routes = [
     component: PrivacyPolicyComponent,
   },
   {
+    path: 'onboarding',
+    loadChildren: () =>
+      import('./onboarding/onboarding.module').then((m) => m.OnboardingModule),
+  },
+  {
     path: 'login',
     loadChildren: () =>
       import('./login/login.module').then((m) => m.LoginModule),

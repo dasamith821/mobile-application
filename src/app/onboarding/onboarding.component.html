@@ -1,0 +1,58 @@
+<script>
+  register();
+</script>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button> Skip </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <swiper-container slides-per-view="1">
+    <swiper-slide>
+      <ion-img
+        src="../../assets/icon/onboarding1.png"
+        alt="Onboarding Image"
+      ></ion-img>
+      <ion-text color="primary">
+        <h1>Discover more about Alopecia Areata</h1>
+      </ion-text>
+      <p>
+        Keep up to date with your understanding of Alopecia Areata and share
+        resources with your friends and family from source you can trust
+      </p>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-img
+      src="../../assets/icon/onboarding2.png"
+      alt="Onboarding Image"
+    ></ion-img>
+      <ion-text color="primary">
+        <h1>Keep track of your progress</h1>
+      </ion-text>
+      <p>
+        Log and monitor your progress over time in a format you can share with others
+      </p>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-img
+      src="../../assets/icon/onboarding3.png"
+      alt="Onboarding Image"
+    ></ion-img>
+      <ion-text color="primary">
+        <h1>Connect with people you can relate to</h1>
+      </ion-text>
+      <p>
+        Find support groups and get information on Alopecia Areata
+      </p>
+    </swiper-slide>
+  </swiper-container>
+
+  <div class="action-btn">
+    <ion-button expand="block" (click)="goToNextSlide()">Next</ion-button>
+    <ion-button  *ngIf="false"  expand="block">Let's go!</ion-button>
+
+  </div>
+</ion-content>

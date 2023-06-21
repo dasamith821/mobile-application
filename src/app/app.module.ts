@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TermConditionsComponent } from './term-conditions/term-conditions.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { register } from 'swiper/element/bundle';
+register();
 
 @NgModule({
   declarations: [AppComponent,TermConditionsComponent,PrivacyPolicyComponent],
